@@ -1,9 +1,22 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --banner-text-p: 2.6rem;
+  --banner-text-h2: 10rem;
+  --banner-text-btn: 2.2rem;
+  --1280px-banner-text-p: 2.2rem;
+  --1280px-banner-text-h2: 6rem;
+  --1280px-banner-text-btn: 1.8rem;
 }
 
 body {
-  margin: 0;
+  font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,3 +29,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* @media screen and (max-width: 1280px) {
+  :root {
+    font-size: 50%;
+  }
+} */

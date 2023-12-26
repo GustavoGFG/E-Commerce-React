@@ -30,14 +30,16 @@ const CartItems = () => {
                   {cartItems[e.id]}
                 </button>
                 <p>${e.new_price * cartItems[e.id]}</p>
-                <img
-                  className="cartitems-remove-icon"
-                  src={remove_icon}
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                  alt=""
-                />
+                <div className="cartitems-remove-icon-container">
+                  <img
+                    className="cartitems-remove-icon"
+                    src={remove_icon}
+                    onClick={() => {
+                      removeFromCart(e.id);
+                    }}
+                    alt=""
+                  />
+                </div>
               </div>
               <hr />
             </div>

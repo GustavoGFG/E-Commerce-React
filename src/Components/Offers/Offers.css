@@ -1,44 +1,95 @@
 .offers {
-  width: 65%;
-  height: 60vh;
+  width: 100%;
+  width: 100%;
+  overflow: hidden;
   display: flex;
-  margin: auto;
-  padding: 0 140px;
-  margin-bottom: 150px;
+  justify-content: center;
+  margin: 0 auto 12rem;
+  padding-inline: 17.5%;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 .offers-left {
-  flex: 1;
+  flex: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.offers-left h1 {
+.offers-left h2 {
   color: #171717;
-  font-size: 80px;
+  font-size: var(--banner-text-h2);
   font-weight: 600;
 }
 .offers-left p {
   color: #171717;
-  font-size: 22px;
+  font-size: var(--banner-text-p);
   font-weight: 600;
 }
 .offers-left button {
-  width: 282px;
-  height: 70px;
-  border-radius: 35px;
+  width: 28.2rem;
+  height: 7rem;
+  border-radius: 3.5rem;
   background-color: #ff4141;
   border: none;
   color: #fff;
-  font-size: 22px;
+  font-size: var(--banner-text-btn);
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 3rem;
   cursor: pointer;
 }
 .offers-right {
-  flex: 1;
+  flex: 6;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: 50px;
+  padding-top: 5rem;
+}
+.offers-right img {
+  margin-right: -4rem;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1280px) {
+  .offers {
+    padding: 0 17.5%;
+  }
+  .offers-left h2 {
+    font-size: var(--1280px-banner-text-h2);
+  }
+  .offers-left p {
+    font-size: var(--1280px-banner-text-p);
+  }
+  .offers-left button {
+    width: 22rem;
+    height: 6rem;
+
+    font-size: var(--1280px-banner-text-btn);
+  }
+}
+@media screen and (max-width: 900px) {
+  .offers {
+    padding: 3rem 5%;
+    margin: 0 auto 9rem;
+  }
+
+  .offers-right img {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .offers {
+    padding-top: 3rem;
+    margin: 0 auto 7rem;
+  }
+  .offers-left {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .offers-left button {
+    margin-inline: auto;
+  }
+
+  .offers-right img {
+    display: none;
+  }
 }

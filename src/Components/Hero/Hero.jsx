@@ -8,14 +8,14 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-left">
-        <h2>NEW ARRIVALS ONLY</h2>
+        <p>NEW ARRIVALS ONLY</p>
         <div>
           <div className="hero-hand-icon">
-            <p>new</p>
+            <h2>new</h2>
             <img src={hand_icon} alt="" />
           </div>
-          <p>collections</p>
-          <p>for everyone</p>
+          <h2>collections</h2>
+          <h2>for everyone</h2>
         </div>
         <div className="hero-latest-btn">
           <div>Latest Collection</div>

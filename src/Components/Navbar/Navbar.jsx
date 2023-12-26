@@ -4,10 +4,19 @@ import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
+import { useRef } from 'react';
+// import dropdown_icon from '../Assets/dropdown_icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [menu, setMenu] = useState('shop');
   const { getTotalCartItems } = useContext(ShopContext);
+  const menuRef = useRef();
+  const dropdown_toggle = e => {
+    menuRef.current.classList.toggle('nav-menu-visible');
+    e.target.classList.toggle('open');
+  };
 
   return (
     <div className="navbar">
@@ -15,7 +24,14 @@ const Navbar = () => {
         <img src={logo} alt="" />
         <p>SHOPPER</p>
       </div>
-      <ul className="nav-menu">
+
+      <FontAwesomeIcon
+        className="nav-dropdown"
+        onClick={dropdown_toggle}
+        icon={faChevronRight}
+      />
+
+      <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {
             setMenu('shop');
